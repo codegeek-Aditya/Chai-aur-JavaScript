@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async</title>
+  </head>
+  <body style="background-color: #414141; color: #fff">
+    <h1 style="text-align: center">Async</h1>
+    <button class="stopTimeOut-btn">Stop Timeout</button>
+    <button class="btn">Stop Interval </button>
+    <!-- JavaScript  -->
+    <script>
+      // set time out
+      const sayAditya = function () {
+        console.log(`Aditya`);
+      };
+      const changeMe = setTimeout(sayAditya, 2000);
+      // to stop timeout function we use clearTimeOut
+      document.querySelector(".stop-btn").addEventListener("click", function () {
+        clearTimeout(changeMe);
+        console.log("SetTimeOut function stopped");
+      });
+      // set Interval -- continues to run after a specified time
+      const stopInterval = setInterval(() => {
+        console.log(`SetInterval`);
+      }, 1000);
+
+      clearInterval
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project</title>
+  </head>
+  <style>
+    body {
+      background-color: #414141;
+      color: #fff;
+    }
+  </style>
+  <body>
+    <h1>Chai aur JavaScript</h1>
+    <button class="start-btn">Start</button>
+    <button class="stop-btn">Stop</button>
+  </body>
+  <script>
+    // setInterval Function -- start
+    var timeFunction;
+    function callFunction() {
+      timeFunction = setInterval(() => {
+        console.log(`The code is being executed.....`);
+      }, 1000);
+    }
+    // setInterval Function -- stop
+    function haltFunction() {
+      clearInterval(timeFunction);
+    }
+    // declarations
+    const startBtn = document.querySelector(".start-btn");
+    const stopBtn = document.querySelector(".stop-btn");
+
+    startBtn.addEventListener("click", callFunction);
+    stopBtn.addEventListener("click", haltFunction);
+  </script>
+</html>
